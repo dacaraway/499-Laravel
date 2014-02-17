@@ -1,0 +1,165 @@
+[2014-02-12 01:47:36] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in /vagrant/app/views/songs/songs-list.php:21
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-12 01:48:47] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in /vagrant/app/views/songs/songs-list.php:21
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-12 01:50:35] production.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'itp460.usc.edu' (110)' in /vagrant/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:47
+Stack trace:
+#0 /vagrant/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(47): PDO->__construct('mysql:host=itp4...', 'student', 'ttrojan', Array)
+#1 /vagrant/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(20): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=itp4...', Array, Array)
+#2 /vagrant/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(59): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 /vagrant/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(47): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 /vagrant/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(127): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'mysql')
+#5 /vagrant/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(63): Illuminate\Database\DatabaseManager->makeConnection('mysql')
+#6 /vagrant/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(243): Illuminate\Database\DatabaseManager->connection()
+#7 /vagrant/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(208): Illuminate\Database\DatabaseManager->__call('table', Array)
+#8 /vagrant/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(208): Illuminate\Database\DatabaseManager->table('songs')
+#9 /vagrant/app/routes.php(25): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#10 /vagrant/app/routes.php(25): Illuminate\Support\Facades\DB::table('songs')
+#11 [internal function]: {closure}()
+#12 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Route.php(105): call_user_func_array(Object(Closure), Array)
+#13 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1000): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(968): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(738): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /vagrant/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php(38): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /vagrant/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#21 /vagrant/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#22 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(606): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#23 /vagrant/public/index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2014-02-12 02:02:26] production.ERROR: exception 'ErrorException' with message 'Non-static method Song::Search() should not be called statically' in /vagrant/app/routes.php:27
+Stack trace:
+#0 /vagrant/app/routes.php(27): Illuminate\Exception\Handler->handleError(2048, 'Non-static meth...', '/vagrant/app/ro...', 27, Array)
+#1 /vagrant/app/routes.php(27): Song::Search()
+#2 [internal function]: {closure}()
+#3 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Route.php(105): call_user_func_array(Object(Closure), Array)
+#4 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1000): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(968): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(738): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 /vagrant/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php(38): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /vagrant/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#11 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#12 /vagrant/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(606): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#14 /vagrant/public/index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-02-12 02:03:46] production.ERROR: exception 'ErrorException' with message 'Non-static method Song::search() should not be called statically' in /vagrant/app/routes.php:27
+Stack trace:
+#0 /vagrant/app/routes.php(27): Illuminate\Exception\Handler->handleError(2048, 'Non-static meth...', '/vagrant/app/ro...', 27, Array)
+#1 /vagrant/app/routes.php(27): Song::search()
+#2 [internal function]: {closure}()
+#3 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Route.php(105): call_user_func_array(Object(Closure), Array)
+#4 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1000): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(968): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(738): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 /vagrant/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php(38): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /vagrant/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#11 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#12 /vagrant/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(606): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#14 /vagrant/public/index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-02-12 02:04:18] production.ERROR: exception 'ErrorException' with message 'Non-static method Song::search() should not be called statically' in /vagrant/app/routes.php:27
+Stack trace:
+#0 /vagrant/app/routes.php(27): Illuminate\Exception\Handler->handleError(2048, 'Non-static meth...', '/vagrant/app/ro...', 27, Array)
+#1 /vagrant/app/routes.php(27): Song::search()
+#2 [internal function]: {closure}()
+#3 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Route.php(105): call_user_func_array(Object(Closure), Array)
+#4 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1000): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(968): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(738): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 /vagrant/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php(38): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /vagrant/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#11 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#12 /vagrant/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(606): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#14 /vagrant/public/index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-02-12 02:05:08] production.ERROR: exception 'ErrorException' with message 'Non-static method Song::search() should not be called statically' in /vagrant/app/routes.php:27
+Stack trace:
+#0 /vagrant/app/routes.php(27): Illuminate\Exception\Handler->handleError(2048, 'Non-static meth...', '/vagrant/app/ro...', 27, Array)
+#1 /vagrant/app/routes.php(27): Song::search()
+#2 [internal function]: {closure}()
+#3 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Route.php(105): call_user_func_array(Object(Closure), Array)
+#4 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1000): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#5 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(968): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#6 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(738): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#7 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#8 /vagrant/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php(38): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /vagrant/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#11 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#12 /vagrant/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(606): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#14 /vagrant/public/index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-02-12 02:05:29] production.ERROR: exception 'ErrorException' with message 'Invalid argument supplied for foreach()' in /vagrant/app/views/songs/songs-list.php:10
+Stack trace:
+#0 /vagrant/app/views/songs/songs-list.php(10): Illuminate\Exception\Handler->handleError(2, 'Invalid argumen...', '/vagrant/app/vi...', 10, Array)
+#1 /vagrant/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(37): include('/vagrant/app/vi...')
+#2 /vagrant/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(16): Illuminate\View\Engines\PhpEngine->evaluatePath('/vagrant/app/co...', Array)
+#3 /vagrant/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\PhpEngine->get('/vagrant/app/co...', Array)
+#4 /vagrant/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#5 /vagrant/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#6 /vagrant/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\View\View->render()
+#7 /vagrant/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1413): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1003): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(968): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#11 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(738): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 /vagrant/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php(38): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /vagrant/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /vagrant/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(606): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#19 /vagrant/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main} [] []
+[2014-02-12 02:09:15] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function where() on a non-object' in /vagrant/app/models/Song.php:15
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-12 02:14:42] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function where() on a non-object' in /vagrant/app/models/Song.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-12 02:17:14] production.ERROR: exception 'ErrorException' with message 'Undefined property: stdClass::$artist' in /vagrant/app/views/songs/songs-list.php:12
+Stack trace:
+#0 /vagrant/app/views/songs/songs-list.php(12): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', '/vagrant/app/vi...', 12, Array)
+#1 /vagrant/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(37): include('/vagrant/app/vi...')
+#2 /vagrant/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(16): Illuminate\View\Engines\PhpEngine->evaluatePath('/vagrant/app/co...', Array)
+#3 /vagrant/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\PhpEngine->get('/vagrant/app/co...', Array)
+#4 /vagrant/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#5 /vagrant/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#6 /vagrant/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\View\View->render()
+#7 /vagrant/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1413): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1003): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 /vagrant/vendor/laravel/framework/src/Illuminate/Routing/Router.php(968): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#11 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(738): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 /vagrant/vendor/laravel/framework/src/Illuminate/Http/FrameGuard.php(38): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /vagrant/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /vagrant/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /vagrant/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /vagrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(606): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#19 /vagrant/public/index.php(49): Illuminate\Foundation\Application->run()
+#20 {main} [] []
+[2014-02-12 02:27:01] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in /vagrant/app/models/Song.php:8
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
