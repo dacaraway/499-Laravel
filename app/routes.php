@@ -17,6 +17,7 @@ Route::get('/', function()
 });
 
 
-Route::get('/dvd/search', 'DVDController@giveRatings');
-Route::get('/dvd/search', 'DVDController@giveGenres');
+Route::get('/search', 'DVDController@getBoxes');
+Route::get('/results', 'DVDController@listMovies');
+
 
