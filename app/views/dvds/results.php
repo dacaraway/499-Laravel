@@ -24,11 +24,12 @@
         <div class = "movies">
             <tr>
                 <td><?php echo $movie->title?> </td>
-                <td><?php echo $movie->rating_name; ?></td>
-                <td><?php echo $movie->genre_name; ?></td>
-                <td> <?php echo $movie->label_name; ?></td>
-                <td><?php echo $movie->sound_name; ?></td>
-                <td> <?php echo $movie->format_name; ?></td>
+                <td><?php echo $movie->rating->rating_name; ?></td>
+                <td><?php echo $movie->genre->genre_name; ?></td>
+                <td> <?php
+                    if($movie->label)echo $movie->label->label_name; ?></td>
+                <td><?php if($movie->sound) echo $movie->sound->sound_name; ?></td>
+                <td> <?php if($movie->format) echo $movie->format->format_name; ?></td>
                 <td> <?php echo $movie->release_date; ?></td>
             </tr>
         </div>

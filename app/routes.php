@@ -19,5 +19,6 @@ Route::get('/', function()
 
 Route::get('/search', 'DVDController@getBoxes');
 Route::get('/results', 'DVDController@listMovies');
-
+Route::get('/dvds/create', 'DVDController@getBoxes2');
+Route::post('/dvds', 'DVDController@add');
 

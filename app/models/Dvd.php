@@ -1,6 +1,6 @@
 <?php
-class DVD {
-
+class Dvd extends Eloquent{
+/*
     public static function listMovies($dvd_title, $rating, $genre) {
 
         $query = DB::table('dvds')
@@ -40,6 +40,28 @@ class DVD {
 
         $genres = $query->get();
         return $genres;
+    }
+*/
+
+    public function genre()
+    {
+        return $this->belongsTo('Genre');
+    }
+    public function format()
+    {
+        return $this->belongsTo('Format');
+    }
+    public function label()
+    {
+        return $this->belongsTo('Label');
+    }
+    public function rating()
+    {
+        return $this->belongsTo('Rating');
+    }
+    public function sound()
+    {
+        return $this->belongsTo('Sound');
     }
 
 }
