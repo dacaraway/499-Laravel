@@ -32,6 +32,32 @@
             ?>
             </select>
         </div>
+        <div align='center'>
+            <select name = "labels">
+                <?php
+                foreach($labels as $line){
+                    echo '<option value='.$line->id.'>'.$line->label_name.'</option>';
+                }
+                ?>
+            </select>
+        </div>
+        <div align='center'>
+            <select name = "sounds">
+                <?php
+                foreach($sounds as $line){
+                    echo '<option value='.$line->id.'>'.$line->sound_name.'</option>';
+                }
+                ?>
+            </select>
+        </div>
+        <div align='center'>
+            <select name = "formats">
+                <?php
+                foreach($formats as $line){
+                    echo '<option value='.$line->id.'>'.$line->format_name.'</option>';
+                }
+                ?>
+            </select>
 
         <div align='center'>
             <input type = "submit" value = "Search"/>

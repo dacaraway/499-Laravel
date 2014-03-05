@@ -21,4 +21,6 @@ Route::get('/search', 'DVDController@getBoxes');
 Route::get('/results', 'DVDController@listMovies');
 Route::get('/dvds/create', 'DVDController@getBoxes2');
 Route::post('/dvds', 'DVDController@add');
+Route::get('/flickrSearch', 'FlickrController@search');
+Route::get('/flickrResults', 'FlickrController@getResults');
 

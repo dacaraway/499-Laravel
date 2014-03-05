@@ -43,6 +43,19 @@ class Dvd extends Eloquent{
     }
 */
 
+    public static function validate($input)
+    {
+        return Validator::make($input, [
+            'labels' => 'required|integer',
+            'genres' => 'required|integer',
+            'sounds' => 'required|integer',
+            'ratings' => 'required|integer',
+            'formats' => 'required|integer',
+            'title' => 'required|alpha_num|min:3'
+
+        ]);
+    }
+
     public function genre()
     {
         return $this->belongsTo('Genre');
