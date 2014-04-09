@@ -9,7 +9,9 @@ class FlickrController extends BaseController {
     }
 
     public function getResults(){
+
         $results = Cache::get('flickr-itp');
+
 
         if(!$results){
             $tag = Input::get('tag');
@@ -19,7 +21,7 @@ class FlickrController extends BaseController {
             $json = $flickr->getResults();
             $results = $json->photos->photo;
 
-            Cache::put('flickr-itp', $results, .02);
+            Cache::put('flickr-itp', $results, 3);
 
         }
 
